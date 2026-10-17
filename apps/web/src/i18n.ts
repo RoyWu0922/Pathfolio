@@ -588,8 +588,8 @@ export const STRINGS: Record<string, Entry> = {
   },
   'ethics.accessTitle': { en: 'Accessibility and known barriers', zh: '无障碍与已知限制' },
   'ethics.accessBody': {
-    en: 'The agent speaks English in this build, which is a real barrier for some Hong Kong students; Traditional Chinese is the next planned addition. There is a sample profile so a student with no internship can still see the full flow, and every score is labelled in words as well as colour.',
-    zh: '这一版的内核语言是英文，对部分香港学生确实是门槛，繁体中文界面是下一步要补的。我们放了样例资料，让没有实习经历的同学也能走完整流程；每个分数除了颜色还配了文字说明。',
+    en: 'The interface ships in English and Traditional Chinese, toggled in the header; drafted text stays in English, because that is the language the interview itself will be in. There is a sample profile so a student with no internship can still see the full flow, and every score is labelled in words as well as colour.',
+    zh: '界面提供英文与繁体中文，可在页头切换；起草的文案仍是英文，因为面试本身用英文进行。我们放了样例资料，让没有实习经历的同学也能走完整流程；每个分数除了颜色还配了文字说明。',
   },
   'ethics.accessBody2': {
     en: 'Small known gaps: the resume scan works on structured input rather than an uploaded PDF, and the seven-day plan does not sync between devices.',

@@ -1,5 +1,32 @@
 # Roadmap status
 
+## P0.7 — Align the build with the interim report and the competitor review — DONE (2026-10-17)
+
+Two source documents arrived after the build: the interim progress report and a review of a
+competing AI résumé/interview platform. Where they disagreed with the code, the code was right and
+the documents were corrected.
+
+**The report called two things future work; one is already done.** Multilingual support is listed
+there as a future enhancement and ships now — the interface runs in English and Traditional
+Chinese. The report's scope boundaries (no employment guarantee, no replacement for career
+counsellors, no recruitment decisions) already match `docs/ETHICS_PDPO.md` and the on-screen
+disclaimer.
+
+**Still not built, and now stated as such:** mock interview simulation, progress tracking, and
+integration with university career services. These are named in the README's limitations instead
+of being implied away.
+
+**The competitor review's five failure modes** — keyword stuffing, fabricated metrics, rigid
+templates, free-tier caps, niche-field blind spots — are mapped in
+`docs/COMPETITIVE_POSITIONING.md`. Each row records both what this project does differently and
+what it still does not solve, including the honest one: eight curated directions are not every
+career.
+
+**Stale ethics copy fixed.** `ETHICS_PDPO.md` still described Chinese as a post-MVP accessibility
+item and claimed no key would ever reach the browser. Both stopped being true with the visitor-key
+panel; the PDPO table now describes a browser-stored key with a per-request lifetime, and the
+accessibility section says bilingual is shipped while Chinese-language *drafts* remain future work.
+
 ## P0.6 — Four sample profiles, and two scoring bugs they exposed — DONE (2026-10-10)
 
 `data/samples/` holds four CityU-shaped profiles. `GET /v1/samples` lists them, `POST

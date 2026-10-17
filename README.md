@@ -153,6 +153,18 @@ one port.
 - **Never break because of the model.** No key, a timeout or malformed JSON all fall back cleanly.
 - **No leaderboards, no psychometrics, no employer-side screening.** This is a tool for the candidate.
 
+## How it differs from existing tools
+
+A review of comparable AI résumé and interview platforms (written up in
+`docs/COMPETITIVE_POSITIONING.md`) lists five recurring failures: keyword stuffing, fabricated
+metrics, rigid templates, free-tier caps and blind spots in specialised fields. Pathfolio answers
+four of them structurally — rewrites may only restate existing facts, every draft passes a
+fact-check, there are no templates to be trapped by, and scoring is local and unmetered — and
+admits the fifth: eight curated directions are not every career.
+
+> Every tool in that review is either guessing at the candidate's evidence or charging per guess.
+> This one computes the fit locally and refuses drafts it cannot ground.
+
 ## Privacy
 
 Personal identifiers (name, email, phone, links) are stripped before any request leaves the machine.
@@ -167,6 +179,9 @@ Principles of Hong Kong's PDPO; see `docs/ETHICS_PDPO.md`.
   not adjusted for that.
 - Offline drafts exist for the default sample only.
 - Interface copy is bilingual; drafted content is English-only.
+- Mock interviews, progress tracking and integration with university career services — all named as
+  future work in the interim report — are not built. Multilingual support, also future work there,
+  is done: the interface ships in English and Chinese.
 
 ## Sources
 
