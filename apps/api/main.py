@@ -15,7 +15,7 @@ from datetime import datetime, timezone
 from pathlib import Path
 from typing import Any
 
-from fastapi import FastAPI, HTTPException
+from fastapi import FastAPI, HTTPException, Request
 from fastapi.middleware.cors import CORSMiddleware
 from fastapi.responses import FileResponse
 from fastapi.staticfiles import StaticFiles
@@ -57,6 +57,31 @@ SESSIONS: dict[str, dict[str, Any]] = {}
 # Why the last LLM attempt for a task fell back. Surfaced by /healthz so a silent
 # fixture mode is diagnosable instead of mysterious.
 LAST_LLM_ERRORS: dict[str, str] = {}
+
+
+@app.middleware("http")
+async def _llm_credentials(request: Request, call_next):
+    """Let the browser bring its own model credentials for this one request.
+
+    The key arrives in a header, lives in a ContextVar for the duration of the
+    request only, and is never logged or written to the session.
+    """
+    try:
+        from llm import set_request_config
+
+        key = (request.headers.get("x-llm-key") or "").strip()
+        set_request_config(
+            {
+                "key": key,
+                "base": (request.headers.get("x-llm-base") or "").strip(),
+                "model": (request.headers.get("x-llm-model") or "").strip(),
+            }
+            if key
+            else None
+        )
+    except Exception:
+        pass
+    return await call_next(request)
 
 
 # ---------------------------------------------------------------- models

@@ -18,6 +18,7 @@ from __future__ import annotations
 import json
 import os
 import re
+from contextvars import ContextVar
 from pathlib import Path
 from typing import Any
 
@@ -56,8 +57,35 @@ def known_numbers(profile: dict[str, Any]) -> set[str]:
 # ---------------------------------------------------------------- switches
 
 
+# Credentials can come from the environment (the operator's key) or from the
+# visitor's own request headers. A request-scoped value lives in a ContextVar so
+# concurrent requests never see each other's key.
+_REQUEST_CFG: ContextVar[dict[str, str] | None] = ContextVar("llm_request_cfg", default=None)
+
+
+def set_request_config(cfg: dict[str, str] | None) -> None:
+    """Credentials for the current request. None means "use the environment"."""
+    _REQUEST_CFG.set(cfg)
+
+
+def current_config() -> dict[str, str]:
+    override = _REQUEST_CFG.get()
+    if override:
+        return override
+    return {
+        "key": os.environ.get("OPENAI_API_KEY", ""),
+        "base": os.environ.get("OPENAI_BASE_URL", ""),
+        "model": os.environ.get("OPENAI_MODEL", ""),
+    }
+
+
+def has_visitor_key() -> bool:
+    """True when the caller supplied a key rather than the operator."""
+    return bool((_REQUEST_CFG.get() or {}).get("key"))
+
+
 def fixture_mode() -> bool:
-    """Master off switch. True means never call a model."""
+    """Master off switch. True means never call a model unless the visitor brought a key."""
     return os.environ.get("PATHFOLIO_FIXTURE_MODE", "true").lower() != "false"
 
 
@@ -69,10 +97,17 @@ def enabled_tasks() -> set[str]:
 
 
 def task_enabled(task: str) -> bool:
-    """A task runs the model only if the master switch is off, a key exists, and it is listed."""
-    if fixture_mode():
+    """Does this task call a model on this request?
+
+    A visitor who typed their own key in the settings panel has asked for drafts
+    explicitly, so that overrides the operator's fixture switch — the server stays
+    in fixture mode for everyone else.
+    """
+    if not current_config().get("key"):
         return False
-    if not os.environ.get("OPENAI_API_KEY"):
+    if has_visitor_key():
+        return True
+    if fixture_mode():
         return False
     if not enabled_tasks():
         return task == "extract"
@@ -191,19 +226,17 @@ def _load_prompt(name: str) -> str:
     return f"You are the Pathfolio {name} helper. Return JSON only."
 
 
-def _client():  # pragma: no cover - requires network
+def _client(cfg: dict[str, str]):  # pragma: no cover - requires network
     from openai import OpenAI
 
-    return OpenAI(
-        api_key=os.environ["OPENAI_API_KEY"],
-        base_url=os.environ.get("OPENAI_BASE_URL") or None,
-    )
+    return OpenAI(api_key=cfg["key"], base_url=cfg.get("base") or None)
 
 
 def complete_json(system: str, user: str, retries: int = 3) -> dict[str, Any]:  # pragma: no cover
     """Chat completion forced to JSON. Raises RuntimeError if it never validates."""
-    model = os.environ.get("OPENAI_MODEL", "gpt-4o-mini")
-    client = _client()
+    cfg = current_config()
+    model = cfg.get("model") or "gpt-4o-mini"
+    client = _client(cfg)
     last_err: Exception | None = None
 
     for _ in range(retries):

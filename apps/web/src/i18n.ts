@@ -35,6 +35,22 @@ export const STRINGS: Record<string, Entry> = {
   },
   'notFound.back': { en: 'Back to the start', zh: '回到首页' },
   'lang.title': { en: 'Switch the interface to Chinese', zh: '切换界面为英文' },
+  'llm.title': { en: 'Use your own model key', zh: '使用你自己的模型密钥' },
+  'llm.body': {
+    en: 'This demo runs without a model key, so drafts come from an offline sample set. Paste an OpenAI-compatible key here and the model drafts your rewrites, STAR stories, questions and track explanations instead. Scores never change — the local engine computes them either way.',
+    zh: '这个演示默认没有模型密钥，草稿来自离线的样例集。在这里填入一个兼容 OpenAI 的密钥，模型就会为你起草改写、STAR 故事、面试题和方向解释。分数不会变——有没有密钥，分数都由本地引擎计算。',
+  },
+  'llm.key': { en: 'API key', zh: 'API 密钥' },
+  'llm.base': { en: 'Base URL (optional)', zh: '接口地址（可选）' },
+  'llm.model': { en: 'Model (optional)', zh: '模型（可选）' },
+  'llm.save': { en: 'Save', zh: '保存' },
+  'llm.clear': { en: 'Clear', zh: '清除' },
+  'llm.close': { en: 'Close', zh: '关闭' },
+  'llm.saved': { en: 'Saved. The next request will use it.', zh: '已保存，下一个请求就会用它。' },
+  'llm.privacy': {
+    en: 'The key stays in this browser. Each request sends it to this app’s API, which passes it to your provider for that one call — it is never written to the session or to a log. Use a key you can revoke.',
+    zh: '密钥只留在这台浏览器里。每次请求会把它发给本应用的接口，接口只在当次调用中转发给你的服务商——不会写进会话，也不会写进日志。请用一把可以随时吊销的密钥。',
+  },
 
   /* ---------------------------------------------------------------- shared */
   'common.step1': { en: 'Step 1 of 4', zh: '第 1 步 / 共 4 步' },

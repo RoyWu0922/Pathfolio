@@ -94,6 +94,18 @@ export PATHFOLIO_LLM_TASKS=extract,suggest,stories,strategy,tracks,pick_tracks
 Anything not listed uses the offline fixtures, and every response reports which one it used
 (`drafted_by`). `/healthz` shows the per-task state and why the last attempt fell back.
 
+### Bring your own key (visitor mode)
+
+The deployed demo runs without a key, so its drafts come from the offline set. Press **AI** in
+the header and paste any OpenAI-compatible key to draft with the model instead — ordinary chat
+completions, so a DeepSeek or OpenRouter key works if you also set the base URL.
+
+The key is stored in that browser's `localStorage` and sent as `X-LLM-Key`, `X-LLM-Base` and
+`X-LLM-Model` headers. On the server it lives in a request-scoped context variable: it is never
+written to a session, never logged, and never appears in an error message. One click clears it.
+Use a key you can revoke. Scores are identical either way — the engine computes them before the
+model is called.
+
 ## Sample profiles
 
 Four profiles ship in `data/samples/`, and switching between them is the fastest way to see that the

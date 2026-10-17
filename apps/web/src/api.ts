@@ -1,11 +1,17 @@
 // Every API call carries the app's own base path, so one build works both at '/'
 // (dev, preview) and under a prefix like '/pathfolio/'. BASE_URL is '/' in dev.
+import { llmHeaders } from './llm'
+
 const BASE = import.meta.env.BASE_URL.replace(/\/$/, '')
 
 async function req<T>(path: string, init?: RequestInit): Promise<T> {
   const res = await fetch(BASE + path, {
-    headers: { 'Content-Type': 'application/json' },
     ...init,
+    headers: {
+      'Content-Type': 'application/json',
+      ...llmHeaders(),
+      ...(init?.headers ?? {}),
+    },
   })
   if (!res.ok) {
     let detail: unknown = res.statusText

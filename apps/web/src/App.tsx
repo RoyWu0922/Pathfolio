@@ -1,5 +1,8 @@
+import { useState } from 'react'
 import { Link, NavLink, Route, Routes } from 'react-router-dom'
 import { useStore } from './store'
+import { LlmSettings } from './components/LlmSettings'
+import { hasLlmKey } from './llm'
 import { Welcome } from './pages/Welcome'
 import { ProfilePage } from './pages/ProfilePage'
 import { Tracks } from './pages/Tracks'
@@ -9,6 +12,8 @@ import { Ethics } from './pages/Ethics'
 
 export default function App() {
   const { error, fixtureMode, profile, tracks, t, toggleLang, lang } = useStore()
+  const [settingsOpen, setSettingsOpen] = useState(false)
+  const [llmOn, setLlmOn] = useState(() => hasLlmKey())
 
   return (
     <>
@@ -36,6 +41,13 @@ export default function App() {
                 {t('nav.offline')}
               </span>
             )}
+            <button
+              className="ghost small no-print"
+              onClick={() => setSettingsOpen(true)}
+              title={t('llm.title')}
+            >
+              {llmOn ? 'AI ✓' : 'AI'}
+            </button>
             <button
               className="ghost small no-print"
               onClick={toggleLang}
@@ -80,6 +92,14 @@ export default function App() {
           {t('footer.note')}
         </p>
       </footer>
+
+      <LlmSettings
+        open={settingsOpen}
+        onClose={() => {
+          setSettingsOpen(false)
+          setLlmOn(hasLlmKey())
+        }}
+      />
     </>
   )
 }
