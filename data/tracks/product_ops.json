@@ -1,0 +1,24 @@
+{
+  "id": "product_ops",
+  "title": "Product / Operations Graduate",
+  "keywords": [
+    "product", "roadmap", "ops", "operations", "stakeholder", "sprint",
+    "user", "onboarding", "process", "coordination", "jira", "notion"
+  ],
+  "nace_weights": {
+    "communication": 1.0,
+    "teamwork": 1.0,
+    "critical_thinking": 0.8,
+    "leadership": 0.7,
+    "professionalism": 0.6,
+    "career_self_development": 0.5,
+    "technology": 0.4
+  },
+  "wef_rising": ["leadership_social_influence", "analytical_thinking", "curiosity_lifelong_learning"],
+  "star_prompts": [
+    "shipped an improvement with design or engineering",
+    "prioritised conflicting stakeholder requests",
+    "fixed a broken process",
+    "learned a tool fast to unblock a team"
+  ]
+}

@@ -1,0 +1,24 @@
+{
+  "id": "user_research",
+  "title": "UX / User Research Graduate",
+  "keywords": [
+    "research", "interview", "user", "usability", "survey", "qualitative",
+    "quantitative", "testing", "insight", "journey", "prototype", "synthesis"
+  ],
+  "nace_weights": {
+    "critical_thinking": 1.0,
+    "communication": 1.0,
+    "teamwork": 0.7,
+    "professionalism": 0.6,
+    "career_self_development": 0.6,
+    "technology": 0.5,
+    "leadership": 0.3
+  },
+  "wef_rising": ["analytical_thinking", "creative_thinking", "curiosity_lifelong_learning"],
+  "star_prompts": [
+    "what users said versus what they actually did",
+    "turning messy feedback into one finding",
+    "a study or set of interviews you designed from scratch",
+    "persuading a team to change something they had already built"
+  ]
+}

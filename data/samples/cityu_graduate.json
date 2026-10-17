@@ -1,0 +1,89 @@
+{
+  "id": "sample-cityu-2026",
+  "display_name": "Alex Chan",
+  "contact": { "email": "alex.chan@example.edu", "phone": null, "linkedin": null },
+  "school": "City University of Hong Kong",
+  "degree": "BBA",
+  "field": "Business Administration",
+  "grad_year": 2026,
+  "location_preference": ["Hong Kong"],
+  "skills": [
+    "SQL",
+    "Python",
+    "Excel",
+    "Tableau",
+    "Product management",
+    "Stakeholder management",
+    "Jira",
+    "Campaign management",
+    "Digital marketing"
+  ],
+  "languages": ["English", "Cantonese", "Mandarin"],
+  "experiences": [
+    {
+      "id": "exp-helix",
+      "title": "Product & Data Intern",
+      "org": "Helix Studio",
+      "start": "2025-05",
+      "end": null,
+      "current": true,
+      "bullets": [
+        "Built the weekly dashboard three product squads used to review activation, and walked stakeholders through the cohort split every Monday.",
+        "Automated the rebuild in Python, cutting it from six hours a week to a scheduled run.",
+        "Turned the retention findings into a short presentation the marketing team reused in a campaign brief."
+      ],
+      "tags": ["analytics", "technology", "critical_thinking", "career_self_development"]
+    },
+    {
+      "id": "exp-growth",
+      "title": "Growth Assistant (part-time)",
+      "org": "Beacon Learning",
+      "start": "2024-09",
+      "end": "2025-04",
+      "current": false,
+      "bullets": [
+        "Ran a term-long social media campaign that grew trial sign-ups 40 percent.",
+        "Built the channel tracker in Excel so every sign-up could be traced to its source.",
+        "Coordinated the weekly handover with two faculty stakeholders on the campus outreach programme."
+      ],
+      "tags": ["leadership", "teamwork", "professionalism", "communication"]
+    },
+    {
+      "id": "exp-society",
+      "title": "Vice President",
+      "org": "CityU Analytics Society",
+      "start": "2024-08",
+      "end": "2025-05",
+      "current": false,
+      "bullets": [
+        "Led a twelve-person committee running term-time workshops, and rewrote the sign-up process so no session was overbooked.",
+        "Kept the schedule and the budget sheet in Notion, and built a small Excel tracker that cut planning time per session from two hours to thirty minutes.",
+        "Presented the term review to the faculty sponsor and the alumni group, and wrote the one-page presentation the society reused."
+      ],
+      "tags": ["critical_thinking", "communication", "teamwork", "career_self_development"]
+    },
+    {
+      "id": "exp-course",
+      "title": "Research project lead",
+      "org": "GE2401 English for Science",
+      "start": "2025-09",
+      "end": "2025-12",
+      "current": false,
+      "bullets": [
+        "Analysed survey responses from 240 students and built the Tableau dashboard the faculty used in its programme review.",
+        "Wrote the research script and kept the final documentary inside the assigned duration, coordinating the four-person team's user interviews.",
+        "Prepared the final presentation for a panel of three lecturers and two industry guests."
+      ],
+      "tags": ["professionalism", "leadership", "technology", "analytics"]
+    }
+  ],
+  "education": [
+    {
+      "school": "City University of Hong Kong",
+      "degree": "BBA",
+      "field": "Business Administration",
+      "end_year": 2026
+    }
+  ],
+  "constraints": { "no_industries": [], "needs_sponsorship": false }
+}

@@ -1,0 +1,72 @@
+{
+  "id": "sample-cityu-researcher",
+  "display_name": "Sam Ho",
+  "contact": { "email": "sam.ho@example.edu", "phone": null, "linkedin": null },
+  "school": "City University of Hong Kong",
+  "degree": "BSocSc",
+  "field": "Public Policy and Sociology",
+  "grad_year": 2026,
+  "location_preference": ["Hong Kong"],
+  "skills": [
+    "Research",
+    "Qualitative analysis",
+    "Survey design",
+    "Interviewing",
+    "Excel",
+    "SPSS"
+  ],
+  "languages": ["English", "Cantonese"],
+  "experiences": [
+    {
+      "id": "exp-ngo",
+      "title": "Programme Intern",
+      "org": "Hope Community Network",
+      "start": "2025-06",
+      "end": null,
+      "current": true,
+      "bullets": [
+        "Designed a survey of 180 residents and analysed the responses in SPSS for the charity's housing report.",
+        "Ran twelve interviews with community members and wrote up the themes for the programme team.",
+        "Coordinated volunteers across three outreach sessions, matching each volunteer to a site."
+      ],
+      "tags": ["critical_thinking", "communication", "professionalism", "teamwork"]
+    },
+    {
+      "id": "exp-research",
+      "title": "Research Assistant",
+      "org": "CityU Department of Public Policy",
+      "start": "2024-09",
+      "end": "2025-05",
+      "current": false,
+      "bullets": [
+        "Coded 200 open-ended survey responses into a scheme the professor used in a published paper.",
+        "Built the Excel workbook that tracked interview scheduling and consent records for the study.",
+        "Wrote the literature summary that shaped the team's interview questions."
+      ],
+      "tags": ["critical_thinking", "technology", "professionalism", "career_self_development"]
+    },
+    {
+      "id": "exp-volunteer",
+      "title": "Volunteer coordinator",
+      "org": "District Youth Centre",
+      "start": "2023-09",
+      "end": "2024-08",
+      "current": false,
+      "bullets": [
+        "Led a group of fifteen volunteers running weekend activities for secondary students.",
+        "Handled two disagreements inside the volunteer group by talking to each person separately first.",
+        "Presented the year's activity report to the centre's management and the funding body."
+      ],
+      "tags": ["leadership", "teamwork", "communication", "professionalism"]
+    }
+  ],
+  "education": [
+    {
+      "school": "City University of Hong Kong",
+      "degree": "BSocSc",
+      "field": "Public Policy and Sociology",
+      "end_year": 2026
+    }
+  ],
+  "constraints": { "no_industries": [], "needs_sponsorship": false }
+}

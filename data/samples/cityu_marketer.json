@@ -1,0 +1,73 @@
+{
+  "id": "sample-cityu-marketer",
+  "display_name": "Mia Lam",
+  "contact": { "email": "mia.lam@example.edu", "phone": null, "linkedin": null },
+  "school": "City University of Hong Kong",
+  "degree": "BBA",
+  "field": "Marketing",
+  "grad_year": 2026,
+  "location_preference": ["Hong Kong"],
+  "skills": [
+    "Digital marketing",
+    "Campaign management",
+    "Social media",
+    "Excel",
+    "PowerPoint",
+    "Content writing",
+    "Customer research"
+  ],
+  "languages": ["English", "Cantonese", "Mandarin"],
+  "experiences": [
+    {
+      "id": "exp-agency",
+      "title": "Marketing Intern",
+      "org": "Pulse Digital",
+      "start": "2025-06",
+      "end": null,
+      "current": true,
+      "bullets": [
+        "Ran two paid social media campaigns for a client, and reported the cost per sign-up to the account lead each week.",
+        "Wrote the copy for a launch campaign that lifted the client's email open rate from 18 to 26 percent.",
+        "Built the campaign tracker in Excel so the team could see which channel brought each customer."
+      ],
+      "tags": ["communication", "professionalism", "technology", "critical_thinking"]
+    },
+    {
+      "id": "exp-society",
+      "title": "Marketing Director",
+      "org": "CityU Business Society",
+      "start": "2024-09",
+      "end": "2025-05",
+      "current": false,
+      "bullets": [
+        "Led a six-person team that grew society sign-ups 35 percent through a term-long campus campaign.",
+        "Negotiated two sponsorship deals that funded the society's flagship event.",
+        "Presented the campaign results to the society committee and the faculty advisor."
+      ],
+      "tags": ["leadership", "teamwork", "communication", "professionalism"]
+    },
+    {
+      "id": "exp-shop",
+      "title": "Retail Assistant (part-time)",
+      "org": "Harbour Books",
+      "start": "2023-09",
+      "end": "2024-08",
+      "current": false,
+      "bullets": [
+        "Handled an average of forty customers a shift and resolved complaints at the counter without escalating.",
+        "Tracked which titles sold out first and passed the list to the buyer every fortnight.",
+        "Trained two new part-timers on the till and the returns process."
+      ],
+      "tags": ["professionalism", "communication", "teamwork", "career_self_development"]
+    }
+  ],
+  "education": [
+    {
+      "school": "City University of Hong Kong",
+      "degree": "BBA",
+      "field": "Marketing",
+      "end_year": 2026
+    }
+  ],
+  "constraints": { "no_industries": [], "needs_sponsorship": false }
+}

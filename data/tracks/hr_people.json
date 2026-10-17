@@ -1,0 +1,24 @@
+{
+  "id": "hr_people",
+  "title": "People / HR / Talent Graduate",
+  "keywords": [
+    "recruitment", "onboarding", "training", "employee", "hr", "performance",
+    "engagement", "interview", "policy", "culture", "retention", "mentoring"
+  ],
+  "nace_weights": {
+    "communication": 1.0,
+    "professionalism": 1.0,
+    "teamwork": 0.9,
+    "leadership": 0.8,
+    "career_self_development": 0.7,
+    "critical_thinking": 0.4,
+    "technology": 0.3
+  },
+  "wef_rising": ["leadership_social_influence", "talent_management", "curiosity_lifelong_learning"],
+  "star_prompts": [
+    "a disagreement between two people you had to handle",
+    "bringing someone new up to speed",
+    "running a training or induction session",
+    "handling information you could not share"
+  ]
+}

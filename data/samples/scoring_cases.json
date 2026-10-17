@@ -1,0 +1,29 @@
+{
+  "jaccard_analytics_cityu": {
+    "profile_skills": ["excel", "sql", "python", "tableau", "powerpoint", "cantonese", "english"],
+    "track_keywords": ["sql", "python", "excel", "tableau", "statistics", "dashboard", "ab", "experiment", "cohort", "pandas", "looker", "powerbi"],
+    "expected_overlap": 0.2667,
+    "tolerance": 0.0005
+  },
+  "star_full_quantified": {
+    "situation": "In May 2025 at Helix Studio the insights squad could not agree why week-two retention dropped.",
+    "task": "I was asked to find a cause the product lead could act on within one week.",
+    "action": "I pulled trial cohorts in SQL, compared first-session dashboard opens across six weeks, built a chart of the churn split, walked the product lead through the two clearest options, and rewrote the query so the squad could rerun it every Monday without me.",
+    "result": "Users who never opened the dashboard churned at almost twice the rate; the team shipped a simpler first-run prompt and retention recovered 6 percent within three weeks.",
+    "expected_score": 5
+  },
+  "star_we_only": {
+    "situation": "The society needed more members.",
+    "task": "We wanted growth.",
+    "action": "We posted on Instagram and we held a booth.",
+    "result": "It went well.",
+    "expected_score_max": 2
+  },
+  "star_no_result": {
+    "situation": "Last term our documentary group was behind on the cut.",
+    "task": "I had to keep the film under the assigned duration.",
+    "action": "I rewrote the shooting script and sat with the editor for two nights trimming scenes.",
+    "result": "",
+    "expected_score_max": 3
+  }
+}

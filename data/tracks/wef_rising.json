@@ -1,0 +1,12 @@
+{
+  "ai_big_data": ["sql", "python", "machine learning", "ml", "ai", "pandas", "statistics", "ab", "experiment"],
+  "networks_cybersecurity": ["security", "cyber", "network", "privacy"],
+  "technological_literacy": ["excel", "python", "sql", "tableau", "looker", "powerbi", "jira"],
+  "creative_thinking": ["design", "campaign", "story", "script", "ideation"],
+  "resilience_flexibility_agility": ["deadline", "change", "pivot", "crisis"],
+  "curiosity_lifelong_learning": ["workshop", "course", "self-taught", "certificate"],
+  "leadership_social_influence": ["led", "vice president", "committee", "mentored"],
+  "talent_management": ["mentored", "hired", "onboarded"],
+  "analytical_thinking": ["analysis", "cohort", "dashboard", "insight", "sql"],
+  "environmental_stewardship": ["sustainability", "esg", "carbon"]
+}

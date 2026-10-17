@@ -1,0 +1,22 @@
+{
+  "js": "javascript",
+  "ts": "typescript",
+  "ms excel": "excel",
+  "microsoft excel": "excel",
+  "power bi": "powerbi",
+  "a/b": "ab",
+  "a/b test": "ab",
+  "ab test": "ab",
+  "ml": "machine learning",
+  "c++": "c++",
+  "c#": "c#",
+  "product management": "product",
+  "stakeholder management": "stakeholder",
+  "campaign management": "campaign",
+  "digital marketing": "marketing",
+  "api design": "api",
+  "qualitative analysis": "qualitative",
+  "survey design": "survey",
+  "interviewing": "interview",
+  "customer research": "customer"
+}

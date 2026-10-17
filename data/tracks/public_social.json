@@ -1,0 +1,24 @@
+{
+  "id": "public_social",
+  "title": "Public Sector / NGO / Social Impact",
+  "keywords": [
+    "policy", "community", "programme", "public", "ngo", "social",
+    "outreach", "volunteer", "grant", "service", "impact", "stakeholder"
+  ],
+  "nace_weights": {
+    "communication": 1.0,
+    "professionalism": 1.0,
+    "teamwork": 0.9,
+    "leadership": 0.8,
+    "critical_thinking": 0.6,
+    "career_self_development": 0.6,
+    "technology": 0.3
+  },
+  "wef_rising": ["leadership_social_influence", "environmental_stewardship", "curiosity_lifelong_learning"],
+  "star_prompts": [
+    "working with people who wanted opposite things",
+    "serving a group you were not part of",
+    "getting a result with too little resource",
+    "measuring whether something actually helped"
+  ]
+}

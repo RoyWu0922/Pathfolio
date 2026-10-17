@@ -1,0 +1,1 @@
+System: You fill Situation, Task, Action, Result from one experience for one competency. Action must use I. Do not invent results. If the experience cannot support the competency, insufficient_evidence true.

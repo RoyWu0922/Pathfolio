@@ -1,0 +1,24 @@
+{
+  "id": "tech_delivery",
+  "title": "Technology / Delivery Graduate",
+  "keywords": [
+    "python", "sql", "git", "api", "testing", "agile",
+    "scrum", "jira", "deployment", "automation", "debugging", "documentation"
+  ],
+  "nace_weights": {
+    "technology": 1.0,
+    "critical_thinking": 1.0,
+    "teamwork": 0.7,
+    "career_self_development": 0.6,
+    "communication": 0.6,
+    "professionalism": 0.5,
+    "leadership": 0.3
+  },
+  "wef_rising": ["technological_literacy", "ai_big_data", "analytical_thinking"],
+  "star_prompts": [
+    "a fault nobody else could reproduce",
+    "shipping something that had to keep running",
+    "working with a team you were not part of",
+    "learning a tool fast enough to unblock delivery"
+  ]
+}

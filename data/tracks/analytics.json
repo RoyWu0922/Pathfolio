@@ -1,0 +1,24 @@
+{
+  "id": "analytics",
+  "title": "Data / Insights Analyst",
+  "keywords": [
+    "sql", "python", "excel", "tableau", "statistics", "dashboard",
+    "ab", "experiment", "cohort", "pandas", "looker", "powerbi"
+  ],
+  "nace_weights": {
+    "critical_thinking": 1.0,
+    "technology": 1.0,
+    "communication": 0.8,
+    "teamwork": 0.6,
+    "professionalism": 0.5,
+    "career_self_development": 0.4,
+    "leadership": 0.3
+  },
+  "wef_rising": ["ai_big_data", "analytical_thinking", "technological_literacy"],
+  "star_prompts": [
+    "messy or incomplete data",
+    "explained a number to a non-technical audience",
+    "a deadline you nearly missed",
+    "disagreed with a teammate about an analysis"
+  ]
+}

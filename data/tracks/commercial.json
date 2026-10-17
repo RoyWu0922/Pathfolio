@@ -1,0 +1,24 @@
+{
+  "id": "commercial",
+  "title": "Commercial / Marketing / Management Trainee",
+  "keywords": [
+    "marketing", "campaign", "brand", "sales", "business development",
+    "presentation", "excel", "powerpoint", "customer", "growth", "social media"
+  ],
+  "nace_weights": {
+    "communication": 1.0,
+    "leadership": 0.8,
+    "professionalism": 0.8,
+    "teamwork": 0.7,
+    "career_self_development": 0.6,
+    "critical_thinking": 0.5,
+    "technology": 0.3
+  },
+  "wef_rising": ["leadership_social_influence", "creative_thinking", "curiosity_lifelong_learning"],
+  "star_prompts": [
+    "persuaded a group to take an action",
+    "ran a campaign or event end to end",
+    "handled a difficult customer or member",
+    "missed a target and recovered"
+  ]
+}

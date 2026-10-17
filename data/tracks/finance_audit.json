@@ -1,0 +1,24 @@
+{
+  "id": "finance_audit",
+  "title": "Finance / Audit / Risk Graduate",
+  "keywords": [
+    "accounting", "audit", "financial", "budget", "forecast", "excel",
+    "compliance", "control", "risk", "reporting", "taxation", "cpa"
+  ],
+  "nace_weights": {
+    "professionalism": 1.0,
+    "critical_thinking": 1.0,
+    "technology": 0.7,
+    "communication": 0.7,
+    "teamwork": 0.5,
+    "career_self_development": 0.4,
+    "leadership": 0.3
+  },
+  "wef_rising": ["analytical_thinking", "technological_literacy", "curiosity_lifelong_learning"],
+  "star_prompts": [
+    "a figure that did not reconcile",
+    "holding a control line when someone wanted it skipped",
+    "explaining a number to a non-financial audience",
+    "producing something usable from incomplete records"
+  ]
+}

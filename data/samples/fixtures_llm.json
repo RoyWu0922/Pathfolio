@@ -1,0 +1,405 @@
+{
+  "_note": "Fixture copy used when the LLM is off, and only for the default sample (data/samples/cityu_graduate.json). Every fact here is drawn from that file. Rewrites add scope and outcome language only; no new employer, tool, metric or percentage that is not already in the profile.",
+  "track_copy": {
+    "analytics": {
+      "rationale": "Your {matched} work already looks like the reporting an analyst graduate is hired to do.",
+      "positioning": "CityU business graduate who has shipped a weekly dashboard three product squads used, read the cohort split behind it, and explained the result to people who did not write the query."
+    },
+    "product_ops": {
+      "rationale": "You coordinated a committee, a cross-faculty handover and a four-person deliverable — that is the operations core.",
+      "positioning": "CityU graduate who has run a twelve-person committee on a shared tracker and turned a sign-up process into one nobody had to police."
+    },
+    "commercial": {
+      "rationale": "You grew trial sign-ups 40 percent on a campaign you ran yourself; commercial teams hire for exactly that.",
+      "positioning": "CityU business graduate who ran a term-long campaign, traced every sign-up back to its channel, and can present numbers to a non-technical room."
+    }
+  },
+  "suggestions": {
+    "analytics": {
+      "exp-helix:0": {
+        "after": "Built the weekly dashboard three product squads used to review activation, and walked stakeholders through the cohort split in a repeatable Monday review.",
+        "reason": "Names the cadence and the audience, not just the artefact.",
+        "grounded_in": [
+          "Built the weekly dashboard three product squads used to review activation, and walked stakeholders through the cohort split every Monday."
+        ]
+      },
+      "exp-course:0": {
+        "after": "Analysed survey responses from 240 students and built the Tableau dashboard the faculty used in its programme review, so the findings landed in one place.",
+        "reason": "Adds where the output went; both facts are already implied by the original bullet.",
+        "grounded_in": [
+          "Analysed survey responses from 240 students and built the Tableau dashboard the faculty used in its programme review."
+        ]
+      },
+      "exp-helix:1": {
+        "after": "Automated the rebuild in Python, cutting it from six hours a week to a scheduled run the squads could trust on their own.",
+        "reason": "States the handover, which the move from hours to a schedule already implies.",
+        "grounded_in": [
+          "Automated the rebuild in Python, cutting it from six hours a week to a scheduled run."
+        ]
+      }
+    },
+    "product_ops": {
+      "exp-society:1": {
+        "after": "Ran the committee's schedule and budget sheet in Notion, and built a small Excel tracker that cut planning time per session from two hours to thirty minutes.",
+        "reason": "Leads with ownership of the process rather than the tool.",
+        "grounded_in": [
+          "Kept the schedule and the budget sheet in Notion, and built a small Excel tracker that cut planning time per session from two hours to thirty minutes."
+        ]
+      },
+      "exp-helix:0": {
+        "after": "Built the weekly dashboard three product squads used to review activation, and put the cohort split into the squads' Monday planning instead of only reporting it.",
+        "reason": "Signals operational use of the number rather than passive reporting.",
+        "grounded_in": [
+          "Built the weekly dashboard three product squads used to review activation, and walked stakeholders through the cohort split every Monday."
+        ]
+      },
+      "exp-growth:2": {
+        "after": "Coordinated the weekly handover with two faculty stakeholders on the campus outreach programme, owning the schedule both sides worked to.",
+        "reason": "Names what the coordination actually involved.",
+        "grounded_in": [
+          "Coordinated the weekly handover with two faculty stakeholders on the campus outreach programme."
+        ]
+      }
+    },
+    "commercial": {
+      "exp-growth:0": {
+        "after": "Ran a term-long social media campaign that grew trial sign-ups 40 percent, and reported the channel split back to the team every week.",
+        "reason": "Adds the reporting habit behind a number already in the profile.",
+        "grounded_in": [
+          "Ran a term-long social media campaign that grew trial sign-ups 40 percent."
+        ]
+      },
+      "exp-helix:2": {
+        "after": "Turned the retention findings into a short presentation the marketing team reused in a campaign brief, keeping it to what a non-analyst could act on.",
+        "reason": "Foregrounds audience and reuse, which is what commercial screens for.",
+        "grounded_in": [
+          "Turned the retention findings into a short presentation the marketing team reused in a campaign brief."
+        ]
+      },
+      "exp-society:2": {
+        "after": "Presented the term review to the faculty sponsor and the alumni group, and wrote the one-page presentation the society reused the following term.",
+        "reason": "Shows the deliverable outlived the meeting.",
+        "grounded_in": [
+          "Presented the term review to the faculty sponsor and the alumni group, and wrote the one-page presentation the society reused."
+        ]
+      }
+    }
+  },
+  "stories": {
+    "analytics": [
+      {
+        "id": "story-an-1",
+        "competency": "communication",
+        "prompt": "Tell me about a time you explained a technical finding to a non-technical audience.",
+        "situation": "At Helix Studio three product squads were reading activation every week without agreeing on what the number meant.",
+        "task": "I was asked to make the cohort split behind it land with people who did not read SQL.",
+        "action": "I pulled the weekly cohort split, cut it down to one chart with two bars, walked the stakeholders through what each bar actually contained, wrote the query so the squads could rerun it every Monday without me, and stayed with the question until the product lead could repeat the explanation back to me.",
+        "result": "The split became a standing item in the Monday review and the dashboard stopped being read in isolation.",
+        "insufficient_evidence": false,
+        "experience_id": "exp-helix"
+      },
+      {
+        "id": "story-an-2",
+        "competency": "technology",
+        "prompt": "Describe a project where you worked with messy or incomplete data.",
+        "situation": "The weekly activation report was rebuilt by hand, and the six hours it took every week sat with one person.",
+        "task": "I needed the same numbers on a schedule, without me in the loop.",
+        "action": "I wrote the Python rebuild end to end, kept the row counts visible so a bad week would announce itself, stored the script where the squad could reach it, and wrote a short note on which part of the pipeline to look at first when a number moved.",
+        "result": "The six hours a week became a scheduled run, and the squads started bringing their own questions to it.",
+        "insufficient_evidence": false,
+        "experience_id": "exp-helix"
+      },
+      {
+        "id": "story-an-3",
+        "competency": "critical_thinking",
+        "prompt": "Tell me about a decision you made from data that you had to revisit.",
+        "situation": "My first read of the retention findings pointed at pricing, and I had already started building the case for it.",
+        "task": "My job was to explain what the numbers actually showed, not to confirm my first explanation.",
+        "action": "I stopped the pricing work, split the cohort by first-session behaviour instead, compared the two groups against the earlier months, found that the drop sat almost entirely with users who had never opened the dashboard, and took the alternative explanation to the insights lead before the review pack was locked.",
+        "result": "The onboarding explanation held in the review and the pricing work was dropped entirely.",
+        "insufficient_evidence": false,
+        "experience_id": "exp-helix"
+      },
+      {
+        "id": "story-an-4",
+        "competency": "teamwork",
+        "prompt": "Tell me about a time you disagreed with a teammate about an analysis.",
+        "situation": "A squad lead wanted retention reported as a single weekly figure for the leadership pack.",
+        "task": "I had to keep the reporting useful without turning a disagreement into a scheduling problem.",
+        "action": "I built both versions, the single figure and the cohort split behind it, looked for a week where the average hid two opposite movements, showed him that one case on a single page, asked which version he would defend if leadership asked why the number moved, and let him choose what went into the pack.",
+        "result": "He kept the headline figure and added the split underneath, and we reused that pattern for two more reports.",
+        "insufficient_evidence": false,
+        "experience_id": "exp-helix"
+      }
+    ],
+    "product_ops": [
+      {
+        "id": "story-po-1",
+        "competency": "leadership",
+        "prompt": "Tell me about a time you led a group through a delivery you were not sure you could hit.",
+        "situation": "The analytics society had a twelve-person committee, a term of workshops booked, and no shared view of who owned what.",
+        "task": "As vice president I owned the schedule and the sign-up process for the whole term.",
+        "action": "I put one named person on each session, built a single shared tracker with dates and owners, rewrote the sign-up process so no session could be overbooked, kept the budget sheet in Notion next to the schedule, and ran a short check each week so a slipping session surfaced while there was still time to fix it.",
+        "result": "Every session ran on its date, planning time per session fell from two hours to thirty minutes, and the committee reused the tracker the next term.",
+        "insufficient_evidence": false,
+        "experience_id": "exp-society"
+      },
+      {
+        "id": "story-po-2",
+        "competency": "communication",
+        "prompt": "Tell me about a time you had to align people who wanted different things.",
+        "situation": "Two faculties wanted the same outreach week and neither wanted to move its own event.",
+        "task": "I had to land one handover plan both sides could work to without either losing face.",
+        "action": "I wrote a one-page plan with two dated slots, walked each faculty through it separately, started with the one that had hesitated longest, adjusted the second slot during that first conversation, put the agreement in writing the same evening, and confirmed the handover steps before either side announced anything.",
+        "result": "Both faculties worked to the same plan for the rest of the term and the weekly handover stopped needing me to referee it.",
+        "insufficient_evidence": false,
+        "experience_id": "exp-growth"
+      },
+      {
+        "id": "story-po-3",
+        "competency": "critical_thinking",
+        "prompt": "Describe a time you fixed a process nobody had questioned.",
+        "situation": "Sign-ups for the society's workshops ran through a form that let two people take the same seat, and nobody had treated it as a problem.",
+        "task": "I needed a sign-up process that could not overbook a session, without buying anything.",
+        "action": "I traced what the form was actually used for, interviewed the three people who ran the sessions, found that the overbooking always happened in the two days before a session, changed the flow so seats confirmed on a rolling basis, and checked the next two intakes against the old numbers before calling it fixed.",
+        "result": "No session was overbooked again that term and the committee stopped keeping a manual waiting list.",
+        "insufficient_evidence": false,
+        "experience_id": "exp-society"
+      },
+      {
+        "id": "story-po-4",
+        "competency": "professionalism",
+        "prompt": "Tell me about a deadline you nearly missed and how you handled it.",
+        "situation": "The four-person documentary was inside the assigned duration, but the cut was running long two weeks before submission.",
+        "task": "I was responsible for the script and for the film landing inside the limit.",
+        "action": "I measured the actual runtime the day we noticed rather than the week it was due, flagged the overrun to the group that evening, listed the two scenes that added least, rewrote the script around those cuts while coordinating the team's user interviews, sat with the editor for two evenings to trim the joins, and checked the duration again before we exported.",
+        "result": "We submitted on time and inside the limit, and the group agreed to measure duration at the rough-cut stage from then on.",
+        "insufficient_evidence": false,
+        "experience_id": "exp-course"
+      }
+    ],
+    "commercial": [
+      {
+        "id": "story-co-1",
+        "competency": "communication",
+        "prompt": "Tell me about a time you persuaded a group to take an action.",
+        "situation": "Trial sign-ups for the campus programme had been flat and the team wanted to spend on a channel that had already been tried.",
+        "task": "I had to make the case for moving the budget, with numbers rather than opinion.",
+        "action": "I pulled the channel tracker I had built in Excel, broke sign-ups down by source across the term, showed that one channel carried most of the sign-ups at a fraction of the cost of the other, brought two charts to the weekly meeting, asked the lead to name the number that would change his mind before I showed them, and followed up in writing the same day.",
+        "result": "The budget moved to the stronger channel and the campaign finished the term at 40 percent more trial sign-ups.",
+        "insufficient_evidence": false,
+        "experience_id": "exp-growth"
+      },
+      {
+        "id": "story-co-2",
+        "competency": "leadership",
+        "prompt": "Describe something you grew, and the number that proves it.",
+        "situation": "The society's outreach had stalled at its own faculty and the term had already started.",
+        "task": "As the person running the campaign I was accountable for sign-ups, not for activity.",
+        "action": "I split the term into four pushes, put a named owner on each channel, tracked sign-ups weekly in the same Excel sheet so a weak week showed up immediately, took the social media work on myself when one owner dropped out, and closed the term with a one-page review of what to repeat.",
+        "result": "The campaign grew trial sign-ups 40 percent and the channel tracker became the team's standing document.",
+        "insufficient_evidence": false,
+        "experience_id": "exp-growth"
+      },
+      {
+        "id": "story-co-3",
+        "competency": "critical_thinking",
+        "prompt": "Tell me about a time you used numbers to change someone's mind.",
+        "situation": "A faculty partner believed the outreach programme only reached our own students.",
+        "task": "I had to show where the sign-ups actually came from, using data the team already held.",
+        "action": "I pulled the sign-up list, broke it down by faculty and year, checked the four pushes separately in case one had skewed the total, found that a third came from outside our own faculty, built two simple charts, and brought them to the next planning meeting rather than over email.",
+        "result": "The partnership continued on better terms and the team started reporting audience mix at every review.",
+        "insufficient_evidence": false,
+        "experience_id": "exp-growth"
+      },
+      {
+        "id": "story-co-4",
+        "competency": "teamwork",
+        "prompt": "Give an example of a deadline you nearly missed and how you handled it.",
+        "situation": "The four-person documentary was over the assigned duration with two weeks left, and the team had already agreed on the cut.",
+        "task": "I had to keep the group together while cutting work we had all contributed.",
+        "action": "I brought the measured runtime to the group instead of deciding alone, listed the two scenes that moved the story least, asked each person whether they could defend keeping one, took the script rewrite myself so nobody lost an editing task, sat with the editor on both cuts, and set a checkpoint three days before submission.",
+        "result": "We submitted inside the limit and kept the same working rhythm for the final presentation.",
+        "insufficient_evidence": false,
+        "experience_id": "exp-course"
+      }
+    ]
+  },
+  "questions": {
+    "analytics": [
+      {
+        "id": "q-an-1",
+        "text": "Walk us through a time messy data changed a decision.",
+        "kind": "behavioural",
+        "competency": "critical_thinking",
+        "why_asked": "Analyst work happens in incomplete data; they want your process, not a perfect warehouse."
+      },
+      {
+        "id": "q-an-2",
+        "text": "How would you explain a retention drop to a marketing lead?",
+        "kind": "technical",
+        "competency": "communication",
+        "why_asked": "Analysts are judged on whether the room acts on the number."
+      },
+      {
+        "id": "q-an-3",
+        "text": "Describe a dashboard you built and who used it.",
+        "kind": "behavioural",
+        "competency": "technology",
+        "why_asked": "Separates people who shipped reporting from people who only studied SQL."
+      },
+      {
+        "id": "q-an-4",
+        "text": "How would you measure whether an onboarding change worked?",
+        "kind": "case",
+        "competency": "critical_thinking",
+        "why_asked": "Tests whether you choose a metric and a comparison before touching the data."
+      },
+      {
+        "id": "q-an-5",
+        "text": "Tell me about a time you disagreed with a teammate about an analysis.",
+        "kind": "behavioural",
+        "competency": "teamwork",
+        "why_asked": "Analysts sit between teams that want different numbers."
+      },
+      {
+        "id": "q-an-6",
+        "text": "What would you do if two exports disagreed on the same user's activity?",
+        "kind": "case",
+        "competency": "professionalism",
+        "why_asked": "Checks that you raise a data-quality problem rather than quietly pick one."
+      },
+      {
+        "id": "q-an-7",
+        "text": "Which part of your analytics work did you teach yourself, and how?",
+        "kind": "motivational",
+        "competency": "career_self_development",
+        "why_asked": "Graduate analytics roles change tooling constantly."
+      },
+      {
+        "id": "q-an-8",
+        "text": "Why this role rather than a pure data-science track?",
+        "kind": "motivational",
+        "competency": "career_self_development",
+        "why_asked": "They want to know you understand the difference between insight and model building."
+      }
+    ],
+    "product_ops": [
+      {
+        "id": "q-po-1",
+        "text": "Tell me about a project where you had to get other people to deliver.",
+        "kind": "behavioural",
+        "competency": "leadership",
+        "why_asked": "Operations graduate roles are coordination roles from day one."
+      },
+      {
+        "id": "q-po-2",
+        "text": "How would you prioritise two stakeholders who both call their request urgent?",
+        "kind": "case",
+        "competency": "critical_thinking",
+        "why_asked": "The job is triage, not task-taking."
+      },
+      {
+        "id": "q-po-3",
+        "text": "Describe a process you fixed.",
+        "kind": "behavioural",
+        "competency": "critical_thinking",
+        "why_asked": "They want an example of improving a system, not only surviving it."
+      },
+      {
+        "id": "q-po-4",
+        "text": "Tell me about a time you had to learn a tool quickly to unblock a team.",
+        "kind": "behavioural",
+        "competency": "technology",
+        "why_asked": "Junior product and ops roles pick up new tooling every quarter."
+      },
+      {
+        "id": "q-po-5",
+        "text": "How would you write the requirements for a feature nobody has scoped?",
+        "kind": "case",
+        "competency": "communication",
+        "why_asked": "Tests whether you can turn a vague request into something buildable."
+      },
+      {
+        "id": "q-po-6",
+        "text": "Describe a disagreement with a teammate and what you did.",
+        "kind": "behavioural",
+        "competency": "teamwork",
+        "why_asked": "You will sit between design, engineering and users."
+      },
+      {
+        "id": "q-po-7",
+        "text": "What would you do in your first month on this team?",
+        "kind": "motivational",
+        "competency": "career_self_development",
+        "why_asked": "Looks for a plan, not enthusiasm alone."
+      },
+      {
+        "id": "q-po-8",
+        "text": "Tell me about a time you missed something and told someone early.",
+        "kind": "behavioural",
+        "competency": "professionalism",
+        "why_asked": "Early escalation is the behaviour they are actually hiring."
+      }
+    ],
+    "commercial": [
+      {
+        "id": "q-co-1",
+        "text": "Tell me about a time you convinced someone who did not want to move.",
+        "kind": "behavioural",
+        "competency": "communication",
+        "why_asked": "Commercial roles are measured on whether people say yes."
+      },
+      {
+        "id": "q-co-2",
+        "text": "Describe something you grew, and the number that proves it.",
+        "kind": "behavioural",
+        "competency": "leadership",
+        "why_asked": "They want ownership of an outcome, not participation."
+      },
+      {
+        "id": "q-co-3",
+        "text": "How would you use a set of registration numbers to win an argument?",
+        "kind": "case",
+        "competency": "critical_thinking",
+        "why_asked": "Tests whether you reach for evidence before opinion."
+      },
+      {
+        "id": "q-co-4",
+        "text": "Tell me about a campaign or event you ran end to end.",
+        "kind": "behavioural",
+        "competency": "professionalism",
+        "why_asked": "Management trainee programmes require end-to-end delivery."
+      },
+      {
+        "id": "q-co-5",
+        "text": "How would you respond to a customer who says the price is too high?",
+        "kind": "case",
+        "competency": "communication",
+        "why_asked": "Classic commercial screen; looks for structure and listening."
+      },
+      {
+        "id": "q-co-6",
+        "text": "Give an example of working with people outside your own team.",
+        "kind": "behavioural",
+        "competency": "teamwork",
+        "why_asked": "Commercial work crosses departments from week one."
+      },
+      {
+        "id": "q-co-7",
+        "text": "Which industry would you avoid, and why?",
+        "kind": "motivational",
+        "competency": "career_self_development",
+        "why_asked": "Tests that you have thought about fit rather than applying everywhere."
+      },
+      {
+        "id": "q-co-8",
+        "text": "Tell me about a time you handled a difficult person.",
+        "kind": "behavioural",
+        "competency": "teamwork",
+        "why_asked": "Client-facing juniors meet frustrated people early."
+      }
+    ]
+  },
+  "disclaimer": "Pathfolio drafts wording from the experiences you supplied. It can miss context, repeat bias in job language, or invent details — if a suggestion adds a fact you did not enter, discard it. Scores measure how complete and structured your materials are. They are not an offer prediction and not an employer's view of you. You decide what goes in the exported pack."
+}

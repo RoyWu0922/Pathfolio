@@ -1,0 +1,74 @@
+{
+  "id": "sample-cityu-engineer",
+  "display_name": "Jamie Wong",
+  "contact": { "email": "jamie.wong@example.edu", "phone": null, "linkedin": null },
+  "school": "City University of Hong Kong",
+  "degree": "BSc",
+  "field": "Computer Science",
+  "grad_year": 2026,
+  "location_preference": ["Hong Kong"],
+  "skills": [
+    "Python",
+    "Java",
+    "SQL",
+    "Git",
+    "API design",
+    "Testing",
+    "Debugging",
+    "Docker"
+  ],
+  "languages": ["English", "Cantonese"],
+  "experiences": [
+    {
+      "id": "exp-nexa",
+      "title": "Backend Engineering Intern",
+      "org": "Nexa Systems",
+      "start": "2025-06",
+      "end": null,
+      "current": true,
+      "bullets": [
+        "Built three REST endpoints in Python that the mobile client used to sync user settings.",
+        "Added integration tests to the checkout service, catching two regressions before release.",
+        "Wrote the deployment notes for the team's staging environment so a new joiner could ship in a day."
+      ],
+      "tags": ["technology", "critical_thinking", "professionalism", "career_self_development"]
+    },
+    {
+      "id": "exp-ta",
+      "title": "Teaching Assistant, Programming Fundamentals",
+      "org": "CityU Department of Computer Science",
+      "start": "2024-09",
+      "end": "2025-05",
+      "current": false,
+      "bullets": [
+        "Ran weekly debugging clinics for a class of sixty students and wrote the documentation they kept using.",
+        "Tracked the five most common errors in a shared sheet, so the lecturer could address them in the next lecture.",
+        "Coordinated with two other tutors on a shared marking rubric to keep grading consistent."
+      ],
+      "tags": ["communication", "teamwork", "career_self_development", "professionalism"]
+    },
+    {
+      "id": "exp-hack",
+      "title": "Team lead, campus hackathon",
+      "org": "CityU Hackathon 2025",
+      "start": "2025-03",
+      "end": "2025-03",
+      "current": false,
+      "bullets": [
+        "Led a four-person team that shipped a timetable tool in 36 hours, owning the backend and the data model.",
+        "Split the work so two teammates could build the interface in parallel, and kept the git branches mergeable.",
+        "Presented the finished tool to the judging panel of three industry engineers."
+      ],
+      "tags": ["leadership", "teamwork", "technology", "communication"]
+    }
+  ],
+  "education": [
+    {
+      "school": "City University of Hong Kong",
+      "degree": "BSc",
+      "field": "Computer Science",
+      "end_year": 2026
+    }
+  ],
+  "constraints": { "no_industries": [], "needs_sponsorship": false }
+}
