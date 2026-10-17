@@ -178,6 +178,21 @@ def _all_tracks() -> list[dict[str, Any]]:
     return out
 
 
+def _track_config(track_id: str) -> dict[str, Any]:
+    """Load a track definition, 404 for anything outside the library.
+
+    Validating against the library instead of just checking the file exists also
+    stops a track_id like '../../api/main' from escaping data/tracks/.
+    """
+    for track in _all_tracks():
+        if track.get("id") == track_id:
+            return track
+    raise HTTPException(
+        status_code=404,
+        detail={"code": "unknown_track", "message": f"No career track named '{track_id}'."},
+    )
+
+
 def _sample_files() -> list[Path]:
     return sorted(p for p in SAMPLES.glob("*.json") if p.name not in _SAMPLE_META_FILES)
 
@@ -400,14 +415,14 @@ def recommend_tracks(req: TrackRequest) -> dict[str, Any]:
 def resume_scan_route(req: SuggestRequest) -> dict[str, Any]:
     session = _session(req.session_id)
     track = _track_for(session, req.track_id)
-    return {"scan": resume_scan(session["profile"], _load_json(TRACKS / f"{req.track_id}.json"), _scan_flags(session))}
+    return {"scan": resume_scan(session["profile"], _track_config(req.track_id), _scan_flags(session))}
 
 
 @app.post("/v1/resume/suggest")
 def suggest_bullets(req: SuggestRequest) -> dict[str, Any]:
     session = _session(req.session_id)
     profile = session["profile"]
-    track = _load_json(TRACKS / f"{req.track_id}.json")
+    track = _track_config(req.track_id)
 
     # The offline draft set was written against one specific sample. Showing it for
     # any other profile would mean rewriting sentences the person never wrote, so
@@ -484,7 +499,7 @@ def suggest_bullets(req: SuggestRequest) -> dict[str, Any]:
 def generate_stories(req: StoryRequest) -> dict[str, Any]:
     session = _session(req.session_id)
     profile = session.get("profile") or {}
-    track = _load_json(TRACKS / f"{req.track_id}.json")
+    track = _track_config(req.track_id)
 
     # The offline STAR drafts belong to the default sample. Any other profile gets
     # empty skeletons built from this direction's own prompts, so the model has
@@ -576,7 +591,7 @@ def score_story(req: StoryScoreRequest) -> dict[str, Any]:
 def strategy(req: StoryRequest) -> dict[str, Any]:
     session = _session(req.session_id)
     profile = session.get("profile") or {}
-    track = _load_json(TRACKS / f"{req.track_id}.json")
+    track = _track_config(req.track_id)
     scan = resume_scan(profile, track, _scan_flags(session))
     stories = session.get("stories", {}).get(req.track_id, [])
     # Only the three original directions have a hand-written question bank. Every
@@ -644,7 +659,7 @@ def decide(req: DecisionRequest) -> dict[str, Any]:
 def export_report(session_id: str, track_id: str) -> dict[str, Any]:
     session = _session(session_id)
     profile = session.get("profile") or {}
-    track_cfg = _load_json(TRACKS / f"{track_id}.json")
+    track_cfg = _track_config(track_id)
     scored = session.get("tracks", {}).get(track_id) or score_track(profile, track_cfg, _rising(), _aliases())
     scan = resume_scan(profile, track_cfg, _scan_flags(session))
 

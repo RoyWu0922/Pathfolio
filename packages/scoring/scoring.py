@@ -380,12 +380,21 @@ def resume_scan(
 # ---------------------------------------------------------------- STAR score
 
 
+def _story_text(value: Any) -> str:
+    """A STAR field must be text. Anything else counts as absent.
+
+    str({'x': 1}) contains a digit, which the result check would read as a
+    quantified outcome — so coercing objects invents evidence.
+    """
+    return value.strip() if isinstance(value, str) else ""
+
+
 def star_score(story: Mapping[str, Any]) -> dict[str, Any]:
     """1-5 BARS score with diagnostic caps. Deterministic."""
-    situation = str(story.get("situation") or "").strip()
-    task = str(story.get("task") or "").strip()
-    action = str(story.get("action") or "").strip()
-    result = str(story.get("result") or "").strip()
+    situation = _story_text(story.get("situation"))
+    task = _story_text(story.get("task"))
+    action = _story_text(story.get("action"))
+    result = _story_text(story.get("result"))
 
     combined_words = sum(_word_count(x) for x in (situation, task, action, result))
 

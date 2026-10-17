@@ -28,6 +28,12 @@ export const STRINGS: Record<string, Entry> = {
     zh: 'Pathfolio · 黑客松版本 · 所有分数由本地打分引擎计算；语言模型只负责起草文案，导出什么由你决定。',
   },
   'lang.switch': { en: '中文', zh: 'EN' },
+  'notFound.title': { en: 'This page does not exist', zh: '这个页面不存在' },
+  'notFound.body': {
+    en: 'The address may be mistyped, or the link is out of date. Your profile and tracks are unaffected.',
+    zh: '地址可能打错了，或者这个链接已经过期。你的资料和方向都没有受影响。',
+  },
+  'notFound.back': { en: 'Back to the start', zh: '回到首页' },
   'lang.title': { en: 'Switch the interface to Chinese', zh: '切换界面为英文' },
 
   /* ---------------------------------------------------------------- shared */

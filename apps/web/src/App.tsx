@@ -1,4 +1,4 @@
-import { NavLink, Route, Routes } from 'react-router-dom'
+import { Link, NavLink, Route, Routes } from 'react-router-dom'
 import { useStore } from './store'
 import { Welcome } from './pages/Welcome'
 import { ProfilePage } from './pages/ProfilePage'
@@ -61,6 +61,18 @@ export default function App() {
         <Route path="/tracks/:trackId" element={<Workspace />} />
         <Route path="/tracks/:trackId/report" element={<Report />} />
         <Route path="/ethics" element={<Ethics />} />
+        <Route
+          path="*"
+          element={
+            <section className="wrap">
+              <h1>{t('notFound.title')}</h1>
+              <p className="muted">{t('notFound.body')}</p>
+              <p>
+                <Link to="/">{t('notFound.back')} →</Link>
+              </p>
+            </section>
+          }
+        />
       </Routes>
 
       <footer className="wrap" style={{ paddingTop: 0 }}>
